@@ -1,0 +1,9 @@
+<button
+  [class]="getClasses()"
+  (click)="handleClick()"
+  type="button">
+    <!-- Highlight Effect -->
+    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+    
+    <span class="relative z-10 drop-shadow-sm">{{ label }}</span>
+</button>

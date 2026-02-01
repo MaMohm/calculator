@@ -1,0 +1,35 @@
+<main class="bg-gray-950 min-h-screen flex items-center justify-center p-4">
+    <div
+        class="w-full max-w-md bg-black rounded-[3rem] p-6 shadow-2xl relative border border-gray-800 overflow-hidden min-h-[800px] flex flex-col">
+
+        <!-- History Sidebar Overlay -->
+        <app-history-tray [isOpen]="isHistoryOpen" (close)="isHistoryOpen = false"></app-history-tray>
+
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6 px-2 z-10 relative">
+            <h1 class="text-gray-400 font-bold tracking-widest text-sm uppercase">Angular Calc</h1>
+            <button (click)="toggleHistory()"
+                class="text-gray-400 hover:text-white transition-colors p-2 rounded-full hover:bg-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Display -->
+        <app-calculator-display [mainText]="calculator.currentDisplay()" [subText]="calculator.secondaryDisplay()">
+        </app-calculator-display>
+
+        <!-- Keypad -->
+        <div class="flex-1 z-10 relative">
+            <app-calculator-keypad></app-calculator-keypad>
+        </div>
+
+        <!-- Decor: Soft Glow Background -->
+        <div
+            class="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-gradient-radial from-gray-900/40 to-transparent pointer-events-none z-0">
+        </div>
+    </div>
+</main>

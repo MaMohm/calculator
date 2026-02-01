@@ -1,0 +1,76 @@
+<div class="flex flex-col gap-4 w-full h-full">
+
+    <!-- Scientific Toggle -->
+    <div class="flex justify-between items-center px-2">
+        <button (click)="toggleScientific()"
+            class="text-xs text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-wider font-bold">
+            {{ showScientific() ? 'Hide' : 'Show' }} Scientific
+        </button>
+
+        <!-- Memory Indicators (Visual only for now matching service state if we wanted) -->
+        <div *ngIf="calculator.isMemoryStored()" class="text-xs text-cyan-500 font-bold">M</div>
+    </div>
+
+    <!-- Scientific Panel (Animated) -->
+    <div *ngIf="showScientific()"
+        class="grid grid-cols-4 gap-3 bg-gray-800/50 p-3 rounded-2xl mb-2 animate-in fade-in slide-in-from-top-4 duration-300">
+        <app-calculator-button label="sin" type="function"
+            (action)="onButtonAction('sin', 'function')"></app-calculator-button>
+        <app-calculator-button label="cos" type="function"
+            (action)="onButtonAction('cos', 'function')"></app-calculator-button>
+        <app-calculator-button label="tan" type="function"
+            (action)="onButtonAction('tan', 'function')"></app-calculator-button>
+        <app-calculator-button label="log" type="function"
+            (action)="onButtonAction('log', 'function')"></app-calculator-button>
+        <app-calculator-button label="ln" type="function"
+            (action)="onButtonAction('ln', 'function')"></app-calculator-button>
+        <app-calculator-button label="√" type="function"
+            (action)="onButtonAction('sqrt', 'function')"></app-calculator-button>
+        <app-calculator-button label="π" type="function"
+            (action)="onButtonAction('pi', 'function')"></app-calculator-button>
+        <!-- Support needed in service? Service parses 'pi'? or just const. -->
+        <app-calculator-button label="e" type="function"
+            (action)="onButtonAction('e', 'function')"></app-calculator-button>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-4 gap-4 flex-1">
+        <!-- Row 1 -->
+        <app-calculator-button label="AC" type="special"
+            (action)="onButtonAction('AC', 'special')"></app-calculator-button>
+        <app-calculator-button label="+/-" type="special"
+            (action)="onButtonAction('+/-', 'special')"></app-calculator-button>
+        <app-calculator-button label="%" type="special"
+            (action)="onButtonAction('%', 'special')"></app-calculator-button>
+        <app-calculator-button label="÷" type="operator"
+            (action)="onButtonAction('÷', 'operator')"></app-calculator-button>
+
+        <!-- Row 2 -->
+        <app-calculator-button label="7" type="number" (action)="onButtonAction('7', 'number')"></app-calculator-button>
+        <app-calculator-button label="8" type="number" (action)="onButtonAction('8', 'number')"></app-calculator-button>
+        <app-calculator-button label="9" type="number" (action)="onButtonAction('9', 'number')"></app-calculator-button>
+        <app-calculator-button label="×" type="operator"
+            (action)="onButtonAction('×', 'operator')"></app-calculator-button>
+
+        <!-- Row 3 -->
+        <app-calculator-button label="4" type="number" (action)="onButtonAction('4', 'number')"></app-calculator-button>
+        <app-calculator-button label="5" type="number" (action)="onButtonAction('5', 'number')"></app-calculator-button>
+        <app-calculator-button label="6" type="number" (action)="onButtonAction('6', 'number')"></app-calculator-button>
+        <app-calculator-button label="-" type="operator"
+            (action)="onButtonAction('-', 'operator')"></app-calculator-button>
+
+        <!-- Row 4 -->
+        <app-calculator-button label="1" type="number" (action)="onButtonAction('1', 'number')"></app-calculator-button>
+        <app-calculator-button label="2" type="number" (action)="onButtonAction('2', 'number')"></app-calculator-button>
+        <app-calculator-button label="3" type="number" (action)="onButtonAction('3', 'number')"></app-calculator-button>
+        <app-calculator-button label="+" type="operator"
+            (action)="onButtonAction('+', 'operator')"></app-calculator-button>
+
+        <!-- Row 5 -->
+        <app-calculator-button label="0" type="number" [wide]="true" class="col-span-2"
+            (action)="onButtonAction('0', 'number')"></app-calculator-button>
+        <app-calculator-button label="." type="special"
+            (action)="onButtonAction('.', 'special')"></app-calculator-button>
+        <app-calculator-button label="=" type="equals" (action)="onButtonAction('=', 'equals')"></app-calculator-button>
+    </div>
+</div>
