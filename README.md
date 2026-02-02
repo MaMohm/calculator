@@ -10,6 +10,9 @@ A **modern, mobile-first calculator** built with **Angular** and **Tailwind CSS*
 🔗 **Live Demo:**  
 👉 https://mamohm.github.io/calculator/
 
+<img width="1904" height="874" alt="Capture d&#39;écran 2026-02-02 122250" src="https://github.com/user-attachments/assets/16f4acd9-02e2-4a3e-8d11-6d08166f16ad" />
+
+
 </div>
 
 ---
@@ -72,6 +75,7 @@ src/
  │  │  └─ calculator.service.ts
  │  └─ app.component.ts
  └─ styles/
+
 
 
 
