@@ -76,13 +76,7 @@ src/
  │  └─ app.component.ts
  └─ styles/
 
-## How AI was used
-This project uses AI as a development assistant.
-The architecture, feature decisions, and integration logic
-were designed, implemented, and reviewed manually.
 
-AI helped accelerate boilerplate and iterations,
-while the final structure and behavior reflect my own decisions.
 
 
 
