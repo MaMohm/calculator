@@ -10,7 +10,7 @@ A **modern, mobile-first calculator** built with **Angular** and **Tailwind CSS*
 🔗 **Live Demo:**  
 👉 https://mamohm.github.io/calculator/
 
-<img width="1904" height="874" alt="Capture d&#39;écran 2026-02-02 122250" src="https://github.com/user-attachments/assets/16f4acd9-02e2-4a3e-8d11-6d08166f16ad" />
+<img width="552" height="864" alt="Capture d&#39;écran 2026-02-08 202002" src="https://github.com/user-attachments/assets/d55d072a-79eb-417f-8d53-7659823491d8" />
 
 
 </div>
@@ -79,6 +79,14 @@ src/
 
 
 
+
+## How AI was used
+This project uses AI as a development assistant.
+The architecture, feature decisions, and integration logic
+were designed, implemented, and reviewed manually.
+
+AI helped accelerate boilerplate and iterations,
+while the final structure and behavior reflect my own decisions.
 
 
 
